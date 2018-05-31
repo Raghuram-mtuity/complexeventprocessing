@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>ComplexEventProcessing</groupId>
+    <artifactId>complexeventprocessing</artifactId>
+    <version>1.0</version>
+
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.wso2.siddhi/siddhi-core -->
+        <dependency>
+            <groupId>org.wso2.siddhi</groupId>
+            <artifactId>siddhi-core</artifactId>
+            <version>4.1.26</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.wso2.siddhi/siddhi-query-compiler -->
+        <dependency>
+            <groupId>org.wso2.siddhi</groupId>
+            <artifactId>siddhi-query-compiler</artifactId>
+            <version>4.1.26</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.wso2.siddhi/siddhi-query-api -->
+        <dependency>
+            <groupId>org.wso2.siddhi</groupId>
+            <artifactId>siddhi-query-api</artifactId>
+            <version>4.1.26</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.wso2.siddhi/siddhi-annotations -->
+        <dependency>
+            <groupId>org.wso2.siddhi</groupId>
+            <artifactId>siddhi-annotations</artifactId>
+            <version>4.1.26</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.wso2.siddhi/siddhi-extension-time -->
+        <dependency>
+            <groupId>org.wso2.siddhi</groupId>
+            <artifactId>siddhi-extension-time</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.wso2.extension.siddhi.io.kafka/siddhi-io-kafka -->
+        <dependency>
+            <groupId>org.wso2.extension.siddhi.io.kafka</groupId>
+            <artifactId>siddhi-io-kafka</artifactId>
+            <version>4.1.11</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.wso2.extension.siddhi.map.json/siddhi-map-json -->
+        <dependency>
+            <groupId>org.wso2.extension.siddhi.map.json</groupId>
+            <artifactId>siddhi-map-json</artifactId>
+            <version>4.0.20</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.1.15</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.apache.kafka/kafka -->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.12</artifactId>
+            <version>1.1.0</version>
+        </dependency>
+
+
+    </dependencies>
+
+</project>

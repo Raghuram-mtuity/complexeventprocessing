@@ -1,0 +1,19 @@
+@App:name("KafkaSample")
+
+@App:description('Consume events from a Kafka Topic and publish to a different Kafka Topic')
+
+@source(type = 'kafka', topic.list = 'RawTopic', partition.no.list = '0', threading.option = 'single.thread', group.id = 'group', bootstrap.servers = 'localhost:9092',
+	@map(type = 'json', enclosing.element = '$',
+		@attributes(object = "identity.objectID", tenant = "identity.tenantID", domain= "source.domain", value= "props.intensity.value" )))
+define stream SweetProductionStream (object string, tenant string, domain string, value int);
+
+@sink(type = 'kafka', topic = 'EventTopicQueue', bootstrap.servers = 'localhost:9092', partition.no = '0',
+	@map(type = 'json'))
+define stream LowProductionAlertStream (object string, tenant string, domain string, value int);
+
+--Send events in a length window of 5 from kafka_topic to kafka_result_topic
+
+@info(name = 'query1')
+from SweetProductionStream
+select *
+insert into LowProductionAlertStream;
